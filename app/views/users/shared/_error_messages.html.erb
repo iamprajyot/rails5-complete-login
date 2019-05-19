@@ -1,0 +1,8 @@
+<% if resource.errors.any? %>
+  <div class="alert alert-error devise-error-box" style="background-color: aquamarine">
+    <button class="close" data-dismiss="alert">x</button>
+      <% resource.errors.full_messages.each do |message| %>
+        <li><i class="glyphicon glyphicon-remove"> <%= message %></i></li>
+      <% end %>
+  </div>
+<% end %>
